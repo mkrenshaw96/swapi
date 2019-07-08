@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   ship: '';
   film: '';
   response: '';
+  selected;
 
   constructor(private http: HttpClient) { }
 
@@ -55,5 +56,7 @@ export class CardComponent implements OnInit {
     //     }
     //   )
   }
-
+  clicked() {
+    console.log(this.selected)
+  }
 }
