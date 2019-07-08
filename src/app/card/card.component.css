@@ -1,4 +1,44 @@
 #card-container{
     width: 75vw;
-    height: stretch;
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+}
+#data{
+    color:white;
+    margin: auto;
+    width: 500px;
+    background-color: rgb(103,58,183);
+    border: 1px solid rgb(236, 236, 236);
+    /* border-right: 1px solid rgb(236, 236, 236);
+    border-left: 1px solid rgb(236, 236, 236); */
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    /* -webkit-box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75); */
+}
+
+#hr{
+    border:0px;
+    border-bottom: 6px solid rgb(236, 236, 236);
+    border-style: dotted;
+    width: 10%;
+}
+#data-cont{
+    width: 90%;
+    margin:auto;
+    padding-bottom: 20px;
+}
+
+#hr1{
+    border:0px;
+    /* border-bottom: 5px solid rgb(236, 236, 236); */
+    border-bottom: 5px solid black;
+    border-style: dotted;
+    width: 10%;
+
+}
+.card-text{
+    padding: 2px 0px;
 }
