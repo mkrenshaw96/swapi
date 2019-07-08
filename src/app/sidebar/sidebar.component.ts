@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClientModule) { }
 
   ngOnInit() {
   }
