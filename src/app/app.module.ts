@@ -9,6 +9,9 @@ import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material/select'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiData } from './apidata.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,11 @@ import { MatSelectModule } from '@angular/material/select'
     AppRoutingModule,
     HttpClientModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ApiData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,29 +9,32 @@ import { ApiData } from '../apidata.service';
 })
 
 export class SidebarComponent implements OnInit {
-  searchTerm: string="";
-
-  constructor(private http: HttpClient) { }
+  searchTerm: string = "";
+  results: any;
+  constructor(private http: HttpClient, private ApiData: ApiData) { }
 
   ngOnInit() {
   }
 
   onSearchTermChange(event: any) {
-    console.log (event.target.value)
     this.searchTerm = event.target.value;
   }
-  
+
+
+
   onSearch(event: any, placeholder) {
     event.preventDefault();
     let url = `https://swapi.co/api/${placeholder}/?search=${this.searchTerm}`
-    console.log(url)
+    this.ApiData.setType(placeholder)
     this.http.get(url)
-    .subscribe(
-      (data:any) => {
-        const service = new ApiData();
-        service.logApiData(data);
-          console.log(data)
-      }
-    )
+      .subscribe(
+        (data: any) => {
+          const service = new ApiData();
+          service.logApiData(data);
+          console.log(data);
+          this.ApiData.setResponse(data.results)
+
+        }, err => console.log(err)
+      )
   }
 }
