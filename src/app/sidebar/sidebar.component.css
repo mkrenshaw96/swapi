@@ -1,6 +1,6 @@
 .sidebarContainer {
  width:25vw;
- background: whitesmoke;
+ height: calc(100vh - 50px);
 }
 
 .swapiSearch {
@@ -25,3 +25,4 @@
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   }
+
