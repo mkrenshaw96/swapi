@@ -1,3 +1,24 @@
-<div id='sidebar'>
-    SIDEBAR COMPONENT
+<div id="sidebarContainer">
+
+
+  <br>
+
+  <h4>What do you want to search?</h4>
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="people">People</mat-option>
+      <mat-option value="vehicles">Vehicles</mat-option>
+      <mat-option value="films">Films</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>You selected: {{selected}}</p>
+
+  <form>
+    <input class="swapiSearch" placeholder="Search Term" (input)="onSearchTermChange($event, selected)" />
+    <button (click)="onSearch($event, selected)">Search...</button>
+  </form>
+
+
 </div>

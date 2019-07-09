@@ -7,6 +7,11 @@ import { NavComponent } from './nav/nav.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApiData } from './apidata.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ApiData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
