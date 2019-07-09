@@ -3,16 +3,12 @@
     display: flex;
     justify-content: center;
     width: 80vw;
+    border-left: 1px solid rgb(103,58,183);
 }
 #data{
     color:white;
     margin: 6vh auto;
     width: 500px;
-    /* border-right: 1px solid rgb(236, 236, 236);
-    border-left: 1px solid rgb(236, 236, 236); */
-    /* -webkit-box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75);
-    box-shadow: 10px 15px 26px -13px rgba(0,0,0,0.75); */
 }
 
 #hr{
@@ -25,7 +21,6 @@
     width: 90%;
     margin:auto;
     padding-bottom: 20px;
-    /* background-color: rgb(103,58,183); */
 }
 #show-wrapper{
     background-color: rgb(103,58,183);

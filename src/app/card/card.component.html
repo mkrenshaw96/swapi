@@ -1,57 +1,58 @@
-<div id='card-container'>
-    <div id='data' *ngIf="type === 'people'">
-        <div *ngFor='let person of response'>
-            <div id='show-wrapper'>
-                <h1 style='text-align: center;'>{{person.name}}</h1>
-                <hr id='hr'>
-                <div id='data-cont'>
-                    <h3 class='card-text'>Stats:</h3>
-                    <div class='card-text'>Birth Year - {{person.birth_year}}</div>
-                    <div class='card-text'>Species - Human</div>
-                    <div class='card-text'>Homeworld - Hoth</div>
-                    <h3 class='card-text'>Appearance:</h3>
-                    <div class='card-text'>Skin Color - {{person.skin_color}}</div>
-                    <div class='card-text'>Hair color - {{person.hair_color}}</div>
-                    <div class='card-text'>Eye Color - {{person.eye_color}}</div>
-                    <div class='card-text'>Height - {{person.height}} cm</div>
-                    <div class='card-text'>Mass - {{person.mass}} kg</div>
-                    <div class='card-text'>Gender - {{person.gender}}</div>
+<div>
+    <div id='card-container'>
+        <div id='data' *ngIf="type === 'people'">
+            <div *ngFor='let person of response'>
+                <div id='show-wrapper'>
+                    <h1 style='text-align: center;'>{{person.name}}</h1>
+                    <hr id='hr'>
+                    <div id='data-cont'>
+                        <h3 class='card-text'>Stats:</h3>
+                        <div class='card-text'>Birth Year - {{person.birth_year}}</div>
+                        <div class='card-text'>Species - Human</div>
+                        <div class='card-text'>Homeworld - Hoth</div>
+                        <h3 class='card-text'>Appearance:</h3>
+                        <div class='card-text'>Skin Color - {{person.skin_color}}</div>
+                        <div class='card-text'>Hair color - {{person.hair_color}}</div>
+                        <div class='card-text'>Eye Color - {{person.eye_color}}</div>
+                        <div class='card-text'>Height - {{person.height}} cm</div>
+                        <div class='card-text'>Mass - {{person.mass}} kg</div>
+                        <div class='card-text'>Gender - {{person.gender}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='data' *ngIf="type === 'vehicles'">
+            <div *ngFor='let ship of response'>
+                <div id='show-wrapper'>
+                    <h1 style='text-align: center;'>{{ship.name}}</h1>
+                    <hr id='hr'>
+                    <div id='data-cont'>
+                        <h3 class='card-text'>Vehicle Stats:</h3>
+                        <div class='card-text'>Model - {{ship.model}}</div>
+                        <div class='card-text'>Vehicle Class - {{ship.vehicle_class}}</div>
+                        <div class='card-text'>Max Atmosphering Speed - {{ship.max_atmosphering_speed}} km/h</div>
+                        <div class='card-text'>Length - {{ship.length}} meters</div>
+                        <div class='card-text'>Cargo Capacity - {{ship.cargo_capacity}} kg</div>
+                        <div class='card-text'>Passengers - {{ship.passengers}} people</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='data' *ngIf="type === 'films'">
+            <div *ngFor='let film of response'>
+                <div id='show-wrapper'>
+                    <h1 style='text-align: center;'>{{film.title}}</h1>
+                    <hr id='hr'>
+                    <div id='data-cont'>
+                        <h3 class='card-text'>Film Data:</h3>
+                        <div class='card-text'>Director - {{film.director}}</div>
+                        <div class='card-text'>Producer - {{film.producer}}</div>
+                        <div class='card-text'>Episode Number - {{film.episode_id}}</div>
+                        <div class='card-text'>Release Date - {{film.release_date}}</div>
+                        <h3 class='card-text'>Opening Crawl:</h3>
+                        <div class='card-text'><span style='font-size: .7rem;'>{{film.opening_crawl}}</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id='data' *ngIf="type === 'vehicles'">
-        <div *ngFor='let ship of response'>
-            <div id='show-wrapper'>
-                <h1 style='text-align: center;'>{{ship.name}}</h1>
-                <hr id='hr'>
-                <div id='data-cont'>
-                    <h3 class='card-text'>Vehicle Stats:</h3>
-                    <div class='card-text'>Model - {{ship.model}}</div>
-                    <div class='card-text'>Vehicle Class - {{ship.vehicle_class}}</div>
-                    <div class='card-text'>Max Atmosphering Speed - {{ship.max_atmosphering_speed}} km/h</div>
-                    <div class='card-text'>Length - {{ship.length}} meters</div>
-                    <div class='card-text'>Cargo Capacity - {{ship.cargo_capacity}} kg</div>
-                    <div class='card-text'>Passengers - {{ship.passengers}} people</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id='data' *ngIf="type === 'films'">
-        <div *ngFor='let film of response'>
-            <div id='show-wrapper'>
-                <h1 style='text-align: center;'>{{film.title}}</h1>
-                <hr id='hr'>
-                <div id='data-cont'>
-                    <h3 class='card-text'>Film Data:</h3>
-                    <div class='card-text'>Director - {{film.director}}</div>
-                    <div class='card-text'>Producer - {{film.producer}}</div>
-                    <div class='card-text'>Episode Number - {{film.episode_id}}</div>
-                    <div class='card-text'>Release Date - {{film.release_date}}</div>
-                    <h3 class='card-text'>Opening Crawl:</h3>
-                    <div class='card-text'><span style='font-size: .7rem;'>{{film.opening_crawl}}</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
